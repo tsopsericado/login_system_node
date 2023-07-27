@@ -35,8 +35,11 @@ app.post("/register", (req, res) => {
     }
 
     if (result){
+        res.send(result);
+
+        } else {
         res.send({message: "wrong username/password combination"});
-    }
+        }
     }
   );
 });
